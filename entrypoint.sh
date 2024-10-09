@@ -58,7 +58,7 @@ JAVA_PID=$!
 
 stop_java_app() {
     kill -SIGTERM $JAVA_PID
-    sleep 3
+    sleep 1
 }
 
 trap stop_java_app SIGINT
