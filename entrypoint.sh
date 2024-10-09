@@ -38,7 +38,7 @@ JVM_MEMORY_CONFIGURATION=$(java-buildpack-memory-calculator-linux \
   -headRoom "${HEAD_ROOM}" \
   -poolType metaspace)
 
-echo "JVM Memory Configuration: ${JVM_MEMORY_CONFIGURATION} (total memory: ${TOTAL_MEMORY}B, loaded classes: ${LOADED_CLASS_COUNT}, head room: ${HEAD_ROOM}%) "
+echo "JVM Memory Configuration: ${JVM_MEMORY_CONFIGURATION} (total memory: ${TOTAL_MEMORY}B, loaded classes: ${LOADED_CLASS_COUNT}, thread count: ${THREAD_COUNT}, head room: ${HEAD_ROOM}%) "
 export JAVA_TOOL_OPTIONS="-XX:+ExitOnOutOfMemoryError ${JVM_MEMORY_CONFIGURATION} ${JAVA_TOOL_OPTIONS}"
 
 if [ -f org/springframework/boot/loader/launch/JarLauncher.class ]; then
