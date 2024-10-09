@@ -48,7 +48,7 @@ elif [ -f org/springframework/boot/loader/JarLauncher.class ]; then
     # prior to Spring Boot 3.2
     JAR_LAUNCHER=org.springframework.boot.loader.JarLauncher
 else
-    echo "Error: Neither org.springframework.boot.loader.launch.JarLauncher nor org.springframework.boot.loader.JarLauncher class found in $EXTRACTED_DIR"
+    echo "Error: Neither org.springframework.boot.loader.launch.JarLauncher nor org.springframework.boot.loader.JarLauncher class found in $(pwd)"
     exit 1
 fi
 
